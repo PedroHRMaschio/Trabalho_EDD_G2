@@ -12,17 +12,27 @@ while True:
     print("0: para sair\n")
     opcao = input("Digite aqui a sua opção: ")
 
-    match opcao:
-        case "1":
+    if opcao == "1":
+        funcoes.funcao_1()
+    elif opcao == "2":
+        pass
+    elif opcao == "3":
+        os.system("cls")
+        print("Como você quer realizar sua pesquisa:\n")
+        print("1: Realizar pesquisa usando OR")
+        print("2: Realizar usando AND")
+        print("0: para voltar ao menu anterior")
+        opcao3 = input("\nDigite aqui sua opção: ")
+        if opcao3 == "1":
             pass
-        case "2":
+        elif opcao3 =="2":
             pass
-        case "3":
+        else:
             pass
-        case "4":
-            pass
-        case "0":
-            break
-        case _:
-            os.system("cls")
-            print("Opção inválida\n")
+    elif opcao == "4":
+        pass
+    elif opcao == "0":
+        break
+    else:
+        os.system("cls")
+        print("opção inválida!\n")
