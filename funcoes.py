@@ -88,8 +88,8 @@ def funcao_2():
 def funcao_3_OR():
     busca = input("\nDigite aqui o que deseja buscar: ")
     busca2 = input("\nDigite aqui a segunda palavra que deseja buscar: ")
-    busca = normalize(busca)
-    busca2 = normalize(busca2)
+    busca = normalize('NFKD', busca)
+    busca2 = normalize('NFKD', busca2)
     documentos = []
     nome_documentos_com_palavra = []
     for diretorio, subpastas, arquivos in os.walk("./docs"):
@@ -119,8 +119,8 @@ def funcao_3_OR():
 def funcao_3_AND():
     busca = input("\nDigite aqui o que deseja buscar: ")
     busca2 = input("\nDigite aqui a segunda palavra que deseja buscar: ")
-    busca = normalize(busca)
-    busca2 = normalize(busca2)
+    busca = normalize('NFKD', busca)
+    busca2 = normalize('NFKD', busca2)
     documentos = []
     nome_documentos_com_palavra = []
     for diretorio, subpastas, arquivos in os.walk("./docs"):
